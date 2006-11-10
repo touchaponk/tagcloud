@@ -1,0 +1,71 @@
+<html>
+<head>
+<style type="text/css">
+* {
+  margin:  0;
+  padding: 0;
+}
+div#mytagcloud {
+  width: 200px;
+}
+.tagcloud-list {
+  border: 1px solid #000;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: Arial, sans-self;
+  padding: 2px;
+}
+.tagcloud-base {
+  font-size: 24px;
+  display: inline;
+}
+.tagcloud-anchor {
+  text-decoration: none;
+}
+.tagcloud-ealiest {
+  color: #ccc;
+}
+.tagcloud-earlier {
+  color: #99c;
+}
+.tagcloud-later {
+  color: #99f;
+}
+.tagcloud-latest {
+  color: #00f;
+}
+</style>
+<script type="text/javascript" src="../lib/tagcloud.js"></script>
+<script type="text/javascript">
+<!--
+
+var tc = TagCloud.create();
+
+tc.add('perl', 40, 'http://www.perl.org', Date.parse("1998/10/20 00:00:00"));
+tc.add('ruby', 20, 'http://www.ruby-lang.org', Date.parse("2000/04/30 00:00:00"));
+tc.add('python', 50, 'http://www.python.org', Date.parse("2002/05/12 00:00:00"));
+tc.add('php', 5, 'http://www.php.net', Date.parse("2003/07/10 00:00:00"));
+
+tc.loadEffector('CountSize');
+tc.loadEffector('DateTimeColor');
+
+function setup() {
+  tc.setup('mytagcloud');
+}
+
+function search() {
+  var word = document.getElementById('search').value;
+  tc.searchAndDisplay('mytagcloud', word);
+}
+//-->
+</script>
+</head>
+<body onload="setup();">
+<div id="mytagcloud"></div>
+<div>
+<input type="text" size="50" id="search" /><br />
+<input type="submit" value="search" onclick="search();" />
+</div>
+</body>
+</html>
+
