@@ -76,7 +76,7 @@ At first, create container.
 
   var tc = TagCloud.create();
 
-Next, Add data. 
+Next, add data. 
 
 First argument is a name of tag.
 Second is a count (exp: how many times user use the tag, or etc...).
@@ -98,7 +98,7 @@ Each Effectors are described later.
   tc.loadEffector('DateTimeColor');
 
 Finally, all you have to do is to execute 'setup' method.
-Pass the id of HTML element what you want to generate tagcloud into.  
+Pass the id of HTML element where you want to generate tagcloud into.  
 
   tc.setup('elementId');
 
@@ -118,7 +118,7 @@ all HTML DOM. I'll show you some solutions as follows,
 
 or handle event with addEventListener or attachEvent
 
-If you use Prototype.js, It'll be further simple code.
+If you use Prototype.js, It'll be further simple.
 
   Event.observe(window, 'load' function(){
     tc.setup('elementId');
@@ -126,7 +126,7 @@ If you use Prototype.js, It'll be further simple code.
 
 =head1 CSS
 
-The example HTML that this libary finally generate will be like follow format.
+The example HTML that this libary finally generates will be like follow format.
 
   <div id="mytagcloud">
 
@@ -230,7 +230,7 @@ Newer one becomes deepen.
 
 =head2 HotWord
 
-This effector change style of tag it's name
+This effector changes style of tag it's name
 matches the indicated words.
 
   var effector = tc.loadEffector('HotWord');
