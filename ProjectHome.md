@@ -1,0 +1,1 @@
+This library allows you to generate TagCloud easily.
